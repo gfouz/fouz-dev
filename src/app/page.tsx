@@ -2,7 +2,7 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 import MotionOnScroll from 'components/motiononscroll/MotionOnScroll';
 import HamburgerMenu from 'components/menu/HamburgerMenu';
-import { PurpleBlueButton } from 'components/buttons/buttons'
+import  PurpleBlueButton  from 'components/buttons/PurpleBlueButton'
 import Footer from 'components/footer/Footer';
 import MarkdownToHtml from 'components/markdowntohtml/MarkdownToHtml';
 

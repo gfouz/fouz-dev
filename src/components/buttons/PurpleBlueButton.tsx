@@ -4,7 +4,7 @@ interface PurpleBlueButtonProp {
 }
 
 
-export const PurpleBlueButton = ({ children }: PurpleBlueButtonProp )=> {
+const PurpleBlueButton = ({ children }: PurpleBlueButtonProp )=> {
   return(
     <button
       type='button'
@@ -14,3 +14,5 @@ export const PurpleBlueButton = ({ children }: PurpleBlueButtonProp )=> {
    </button>  
 		)
 }
+
+export default PurpleBlueButton;
