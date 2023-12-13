@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import HamburgerIcon from 'components/icons/HamburgerIcon';
-import fouz_logo from '../../../public/images/fouz-logo.png';
+import fouz_golden from '../../../public/images/fouz-golden.png';
 
 const HamburgerMenu = () => {
   const [open, setOpen] = React.useState(false);
@@ -10,7 +10,7 @@ const HamburgerMenu = () => {
     <nav className='border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800'>
       <div className='mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4'>
         <a href='#' className='flex items-center space-x-3 rtl:space-x-reverse'>
-          <Image src={fouz_logo} className='w-[30px] h-auto' alt='fouz-logo' />
+          <Image src={fouz_golden} className='w-[25px] h-[25px]' alt='fouz-logo' />
           <span className='self-center whitespace-nowrap text-2xl font-semibold dark:text-white'>
             Giovani Fouz
           </span>

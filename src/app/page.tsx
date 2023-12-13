@@ -2,13 +2,13 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 import MotionOnScroll from 'components/motiononscroll/MotionOnScroll';
 import HamburgerMenu from 'components/menu/HamburgerMenu';
-import { PurpleBlueButton } from 'components/Buttons/Buttons'
+import { PurpleBlueButton } from 'components/buttons/buttons'
 import Footer from 'components/footer/Footer';
 import MarkdownToHtml from 'components/markdowntohtml/MarkdownToHtml';
 
 import blog from '../../public/images/blog.jpg';
 import black_gradient from '../../public/images/purple.jpg';
-import fouz_logo from '../../public/images/fouz-nubert.png';
+import fouz_logo from '../../public/images/fouz-green.png';
 import finances from '../../public/images/finances.jpg';
 import hello from '../../public/images/forest.jpg';
 const timesRoman = localFont({ src: '../../public/fonts/times-roman.ttf' });
@@ -50,7 +50,7 @@ export default async function Home() {
               title='blog-introduction'
             />
             <PurpleBlueButton>
-              see aliveeee
+              see alive
             </PurpleBlueButton>
           </section>
         </article>
@@ -60,11 +60,11 @@ export default async function Home() {
               className='flex h-[auto] w-[300px] flex-col items-center justify-center '
               href='https://github.com/gfouz'
             >
-              <h2 className='font-black text-[#6CFF00]'>
+              <h2 className='text-[#6CFF00] font-extralight'>
                 Follow me on Github.
               </h2>
               <Image
-                className='h-auto w-[60px] '
+                className='h-[50px] w-[50px] '
                 src={fouz_logo}
                 alt='technical-stack'
               />
