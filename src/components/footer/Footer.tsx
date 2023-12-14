@@ -1,8 +1,11 @@
+"use client"
 import ContactForm from './ContactForm';
+import { useTheme } from 'store/store';
 
 function Footer() {
+  const theme = useTheme();
   return (
-    <footer className='footer bg-base-200 p-10 text-base-content'>
+    <footer className='footer bg-base-200 p-10 text-base-content' data-theme={ theme }>
       <nav>
         <header className='footer-title'>Join me on</header>
         <a className='link-hover link' href='https://github.com/gfouz'>

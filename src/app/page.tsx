@@ -19,7 +19,7 @@ export default async function Home() {
     hidden: { scale: 0 },
   };
   return (
-    <div className=' text-base-color bg-[#000000]'>
+    <div className='bg-[#000000]' data-theme='halloween'>
       <header>
         <HamburgerMenu />
       </header>
@@ -54,7 +54,7 @@ export default async function Home() {
             </PurpleBlueButton>
           </section>
         </article>
-        <div className='flex items-center justify-center py-[6em] aspect-[2.5] bg-[#040B15]'>
+        <div className='flex items-center justify-center py-[6em]  bg-[#040B15]'>
           <MotionOnScroll variants={zooming}>
             <a
               className='flex h-[auto] w-[300px] flex-col items-center justify-center '
@@ -93,8 +93,9 @@ export default async function Home() {
           </div>
         </article>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
+
 

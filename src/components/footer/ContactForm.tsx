@@ -46,7 +46,7 @@ const ContactForm = () => {
           <SubmitButton />
         </div>
       </fieldset>
-      {errors.email?.message && <p>{errors.email?.message}</p>}
+      
     </form>
   );
 };

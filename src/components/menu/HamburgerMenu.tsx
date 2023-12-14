@@ -1,20 +1,25 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import HamburgerIcon from 'components/icons/HamburgerIcon';
+import DarkButton from 'components/darkbutton/DarkButton'
 import fouz_golden from '../../../public/images/fouz-golden.png';
+import { useTheme, useSetTheme } from 'store/store';
 
 const HamburgerMenu = () => {
+
   const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const setTheme = useSetTheme();
   return (
-    <nav className='border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800'>
+    <nav className='border-gray-200  dark:border-gray-700 ' data-theme={theme}>
       <div className='mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4'>
-        <a href='#' className='flex items-center space-x-3 rtl:space-x-reverse'>
+        <a href='https://github.com/gfouz' className='flex items-center space-x-3 rtl:space-x-reverse'>
           <Image src={fouz_golden} className='w-[25px] h-[25px]' alt='fouz-logo' />
-          <span className='self-center whitespace-nowrap text-2xl font-semibold dark:text-white'>
+          <span className='self-center whitespace-nowrap text-xl font-semibold '>
             Giovani Fouz
           </span>
         </a>
+        <DarkButton onClick={setTheme}>{theme}-theme</DarkButton>
         <button
           onClick={() => setOpen(!open)}
           type='button'
@@ -32,11 +37,11 @@ const HamburgerMenu = () => {
           }
           id='navbar-solid-bg'
         >
-          <ul className='mt-4 flex flex-col rounded-lg bg-gray-50 text-left font-medium rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:dark:bg-transparent'>
+          <ul className='mt-4 flex flex-col rounded-lg  text-left font-medium rtl:space-x-reverse dark:border-gray-700  md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:dark:bg-transparent'>
             <li>
               <a
                 href='#'
-                className='block rounded px-3 py-2 text-white  md:bg-transparent md:p-0  md:dark:bg-transparent'
+                className='block rounded px-3 py-2   md:bg-transparent md:p-0  md:dark:bg-transparent'
                 aria-current='page'
               >
                 About
@@ -45,7 +50,7 @@ const HamburgerMenu = () => {
             <li>
               <a
                 href='#'
-                className='block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500'
+                className='block rounded px-3 py-2 hover:bg-gray-100  dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500'
               >
                 Github
               </a>
@@ -53,7 +58,7 @@ const HamburgerMenu = () => {
             <li>
               <a
                 href='#'
-                className='block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500'
+                className='block rounded px-3 py-2   dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500'
               >
                 Portfolio
               </a>
