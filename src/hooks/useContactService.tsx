@@ -1,13 +1,26 @@
 import { useState, useCallback } from 'react';
-import { contactService } from 'services/contactService';
-import { InputData } from 'schemas/form.input.schema';
 
+interface DataProps {
+  ok: boolean;
+  status: number;
+}
+interface ErrorProps {
+  message: string | undefined;
+}
+
+const initialData = {
+  ok: false,
+  status: 503,
+}
+const initialError = {
+  message: ""
+} 
 const formspree_url = 'https://formspree.io/f/xdovlonj';
 
 export const useContactService = () => {
-  const [data, setData] = useState(undefined);
+  const [data, setData] = useState<DataProps>(initialData);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<unknown | undefined>(undefined);
+  const [error, setError] = useState<ErrorProps>(initialError);
 
   const fetchData = async (formdata: { email: string }) => {
     setLoading(true);
@@ -25,9 +38,9 @@ export const useContactService = () => {
 
       const responseData = await response.json();
 
-      setData(responseData);
-    } catch (error) {
-      setError((error as Error).message);
+      setData({...data, ok:response.ok, status:response.status});
+    } catch (err) {
+      setError( {...error, message:(err as Error).message } )  ;
     } finally {
       setLoading(false);
     }

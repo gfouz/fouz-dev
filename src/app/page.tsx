@@ -2,9 +2,10 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 import MotionOnScroll from 'components/motiononscroll/MotionOnScroll';
 import HamburgerMenu from 'components/menu/HamburgerMenu';
-import  PurpleBlueButton  from 'components/buttons/PurpleBlueButton'
+import PurpleBlueButton from 'components/buttons/PurpleBlueButton';
 import Footer from 'components/footer/Footer';
 import MarkdownToHtml from 'components/markdowntohtml/MarkdownToHtml';
+import FouzLogo from 'logo/FouzLogo';
 
 import blog from '../../public/images/blog.jpg';
 import black_gradient from '../../public/images/purple.jpg';
@@ -14,12 +15,13 @@ import hello from '../../public/images/forest.jpg';
 const timesRoman = localFont({ src: '../../public/fonts/times-roman.ttf' });
 
 export default async function Home() {
+
   const zooming = {
     visible: { transition: { duration: 0.5 }, scale: 1 },
     hidden: { scale: 0 },
   };
   return (
-    <div className='bg-[#000000]' data-theme='halloween'>
+    <div className='' data-theme='coffee'>
       <header>
         <HamburgerMenu />
       </header>
@@ -49,9 +51,7 @@ export default async function Home() {
               className='markdown-paragraph markdown-heading '
               title='blog-introduction'
             />
-            <PurpleBlueButton>
-              see alive
-            </PurpleBlueButton>
+            <PurpleBlueButton>see alive</PurpleBlueButton>
           </section>
         </article>
         <div className='flex items-center justify-center py-[6em]  bg-[#040B15]'>
@@ -63,11 +63,7 @@ export default async function Home() {
               <h2 className='text-[#6CFF00] font-extralight'>
                 Follow me on Github.
               </h2>
-              <Image
-                className='h-[50px] w-[50px] '
-                src={fouz_logo}
-                alt='technical-stack'
-              />
+              <FouzLogo size='50' color='#63FE00' />
             </a>
           </MotionOnScroll>
         </div>
@@ -93,9 +89,7 @@ export default async function Home() {
           </div>
         </article>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
-
-

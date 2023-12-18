@@ -22,7 +22,6 @@
     "paths": {
       "@/*": ["./src/*"],
       "components/*": ["./src/components/*"],
-      "icons/*": ["./src/icons/*"],
       "data/*": ["./src/data/*"],
       "hooks/*": ["./src/hooks/*"],
       "layout/*": ["./src/layout/*"],
@@ -33,9 +32,9 @@
       "scss/*": ["./src/scss/*"],
       "images/*": ["./public/*"],
       "fonts/*": ["./public/fonts/*"],
-      "scss-components/*": ["./src/scss/components/*"],
+      "icons/*": ["./src/components/icons/*"],
       "schemas/*": ["./src/schemas/*"],
-      "utils/*": ["./src/utils/*"],
+      "logo/*": ["./src/components/logo/*"],
       "lib/*": ["./src/lib/*"],
       "actions/*": ["./src/app/(server-actions)/*"]
     }
