@@ -11,10 +11,10 @@ interface ErrorProps {
 const initialData = {
   ok: false,
   status: 503,
-}
+};
 const initialError = {
-  message: ""
-} 
+  message: '',
+};
 const formspree_url = 'https://formspree.io/f/xdovlonj';
 
 export const useContactService = () => {
@@ -38,9 +38,9 @@ export const useContactService = () => {
 
       const responseData = await response.json();
 
-      setData({...data, ok:response.ok, status:response.status});
+      setData({ ...data, ok: response.ok, status: response.status });
     } catch (err) {
-      setError( {...error, message:(err as Error).message } )  ;
+      setError({ ...error, message: (err as Error).message });
     } finally {
       setLoading(false);
     }

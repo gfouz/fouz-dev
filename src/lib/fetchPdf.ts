@@ -1,12 +1,10 @@
-
-
 export function fetchPdf() {
-  fetch("pdf/curriculum.pdf").then((response) => {
+  fetch('pdf/curriculum.pdf').then((response) => {
     response.blob().then((blob) => {
       const fileURL = window.URL.createObjectURL(blob);
-      let alink = document.createElement("a");
+      let alink = document.createElement('a');
       alink.href = fileURL;
-      alink.download = "curriculum.pdf";
+      alink.download = 'curriculum.pdf';
       alink.click();
     });
   });

@@ -2,17 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text-amber: #c59f60;
+  --amber: #c59f60;
+  --scion: #64ff00;
+  --portfolio-background: #1c131b;
+  --portfolio-bg: #1c131b;
+  --cyan-color: #083344;
+  --sky-color: #e0f2fe;
+  --indigo-background: #452179;
+  --indigo-text-color: #452179;
+  --dark-grey:#1b1d29;
+  --dark-purple:#020109;
+  --dark-green:#051A1B;
+}
+
 @layer utilities {
-  .dark-bg {
-    backgrouna-color: #1f2937;
+  .bg-green-gradient {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(44px);
+    z-index: -1;
+    background: radial-gradient(at 71% 77%, #016a70 0, transparent 21%),
+      radial-gradient(at 36% 47%, #092635 0, transparent 50%),
+      radial-gradient(at 54% 29%, #092635 0, transparent 28%),
+      radial-gradient(at 45% 51%, #092635 0, transparent 53%),
+      radial-gradient(at 73% 44%, #016a70 0, transparent 54%),
+      radial-gradient(at 24% 7%, #016a70 0, transparent 40%),
+      radial-gradient(at 76% 46%, #016a70 0, transparent 50%);
   }
 
+  .dark-bg {
+    background-color: #1f2937;
+  }
+  
   .paragraph {
     max-width: 600px;
     font-size: clamp(1.1rem, 1.4vw, 2.5rem);
   }
-  .text-base-color p {
-    color: #999999;
+  
+  .dark-purple-article {
+    color: #d4d4d4;
+    background-color: var(--dark-purple);
   }
   .paragraph a {
     font-style: italic;
@@ -32,13 +66,13 @@
     max-width: 600px;
     font-size: clamp(1.1rem, 1.4vw, 2.5rem);
   }
+  
   .markdown-paragraph a {
     font-style: italic;
     font-weight: 500;
     color: #a855f7;
   }
   .markdown-heading h2 {
-    color: #a855f7;
     margin-block: 0.5rem;
     font-size: clamp(1.5rem, 2.2vw, 5rem);
   }
@@ -62,7 +96,6 @@
   .gradient-bg {
     @apply bg-gradient-to-r  from-stone-950 via-stone-800 to-stone-500 hover:from-[#222222] hover:to-[#222222];
   }
-  /* ... */
 }
 
 * {
@@ -91,9 +124,7 @@
 a {
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
+
 button {
   cursor: pointer;
 }

@@ -4,7 +4,6 @@ import fs from 'fs';
 /*import fs from 'fs/promises';
 import { cache } from 'react';*/
 
-
 const markdownDirectory = 'src/markdown';
 
 // `cache` is a React 18 feature that allows you to cache a function for the lifetime of a request.
@@ -13,17 +12,15 @@ const markdownDirectory = 'src/markdown';
 const markdownParser = async () => {
   const allMarkdownFiles = fs.readdirSync(markdownDirectory);
   const markdown = allMarkdownFiles
-      .filter((file) => path.extname(file) === '.mdx')
-      .map( (file) => {
-        const filePath = `${markdownDirectory}/${file}`;
-        const postContent = fs.readFileSync(filePath, 'utf8');
-        //const slug = file.replace('.mdx', '');
-        const { data: meta, content } = matter(postContent);
-        return { meta, content };
-      })
-      return markdown
-}
-
-
+    .filter((file) => path.extname(file) === '.mdx')
+    .map((file) => {
+      const filePath = `${markdownDirectory}/${file}`;
+      const postContent = fs.readFileSync(filePath, 'utf8');
+      //const slug = file.replace('.mdx', '');
+      const { data: meta, content } = matter(postContent);
+      return { meta, content };
+    });
+  return markdown;
+};
 
 export default markdownParser;
