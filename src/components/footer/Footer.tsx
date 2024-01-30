@@ -4,7 +4,7 @@ import Tooltip from 'components/tooltip/Tooltip';
 
 export default function Footer() {
   return (
-    <footer className='flex justify-center p-8 w-[100%] bg-[--dark-green]'>
+    <footer className='flex justify-center p-8 w-[100%] bg-[#020109]'>
       <div className='container py-6'>
         <div className='flex justify-center pb-5 pt-2'>
           <Form />

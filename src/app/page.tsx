@@ -12,6 +12,8 @@ import black_gradient from '../../public/images/purple.jpg';
 import fouz_logo from '../../public/images/fouz-green.png';
 import finances from '../../public/images/finances.jpg';
 import hello from '../../public/images/hello.jpg';
+import fouz_stack from '../../public/images/fouz-stack.jpg';
+
 import hexagonal from '../../public/images/hexagonal.jpg';
 const helvetica_bold = localFont({
   src: '../../public/fonts/helvetica-bold.otf',
@@ -23,7 +25,7 @@ export default async function Home() {
     visible: { transition: { duration: 0.5 }, scale: 1 },
     hidden: { scale: 0 },
   };
-  
+
   return (
     <div className='dark-purple-article'>
       <header className='portfolio'>
@@ -34,9 +36,7 @@ export default async function Home() {
           <Image className='h-auto max-w-[100%]' src={hello} alt='blog-image' />
           <div className='flex flex-col items-center absolute w-[100%] aspect-[1.85] top-0 left-0'>
             <div className='h-[32%]'></div>
-            <div className='w-[70%] h-[38%] '>
-              
-            </div>
+            <div className='w-[70%] h-[38%] '></div>
             <a
               className='flex items-center justify-center w-[70px] h-[70px] rounded-[50%] bg-[--dark-purple] hover:bg-purple-800   transition-all duration-500'
               href='https:github.com/gfouz'
@@ -52,9 +52,7 @@ export default async function Home() {
           />
         </section>
         <article className='py-16 dark-theme-article'>
-          <h2 className='text-neutral-300'>
-            Projects and their links
-          </h2>
+          <h2 className='text-neutral-300'>Projects and their links</h2>
         </article>
         <article className='md:flex'>
           <div className='flex-1 overflow-hidden '>
@@ -75,35 +73,12 @@ export default async function Home() {
           </section>
         </article>
 
-          <section className='w-[100%] flex flex-col justify-center items-center py-[8em] bg-[--dark-purple]'>
-            <div className='text-left'>
-              <h2 className='text-neutral-300'>I use these technologies</h2>
-              <a href='https:github.com/gfouz'>
-                <Ratingbar
-                  color='#ec4899'
-                  percent='90'
-                  name='Html, Css & Scss'
-                />
-              </a>
-              <a href='https:github.com/gfouz'>
-                <Ratingbar
-                  color='#fde047'
-                  percent='85'
-                  name='JavaScript & TypeScript'
-                />
-              </a>
-              <a href='https:github.com/gfouz'>
-                <Ratingbar color='#60a5fa' percent='90' name='React NextJs' />
-              </a>
-              <a href='https:github.com/gfouz'>
-                <Ratingbar
-                  color='#8b5cf6'
-                  percent='15'
-                  name='Learning Golang'
-                />
-              </a>
-            </div>
-          
+        <section className='w-[100%]'>
+          <Image
+              className='h-auto max-w-[100%]'
+              src={fouz_stack}
+              alt='fouz-stack'
+            />
         </section>
         <article className='md:flex'>
           <section className='flex flex-1 flex-col items-center justify-center p-4 py-6 text-left'>
